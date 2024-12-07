@@ -1,8 +1,8 @@
 # Sample code for visualization
 
 # Brief description
-# This sample code is a python code for generating an interactive choropleth map.
-# This code draws an interactive choropleth map for U.S. state-level commercial emissions in each year
+# This sample code is a Python script for generating an interactive choropleth map.
+# This code visualizes U.S. state-level commercial emissions for each year.
 # Original data source: https://www.eia.gov/environment/emissions/state/
 
 import pandas as pd
@@ -10,8 +10,17 @@ import plotly.graph_objects as go
 import webbrowser
 import os
 
-file_path = r"~\state_level_emissions_commercial.dta"
-df = pd.read_stata(file_path)
+# Download the data file from GitHub repository
+github_url = "https://raw.githubusercontent.com/soo-hs-kim/ai-and-co2"
+file_name = "eia_emissions_commercial.xlsx"
+
+if not os.path.exists(file_name):
+    response = requests.get(github_url)
+    with open(file_name, "wb") as file:
+        file.write(response.content)
+
+# Load the data
+df = pd.read_excel(file_name)
 
 # Map full state names to state abbreviations
 state_abbreviation_mapping = {
@@ -89,11 +98,7 @@ fig.update_layout(
 )
 
 #Save the figure as an HTML file and open it in a new Chrome tab
-output_path = r"~\state_emissions_map.html"
+output_path = r"state_emissions_map.html"
 fig.write_html(output_path)
 
-# Open the file in a new Chrome tab
-chrome_path = r"~\chrome.exe"  
-webbrowser.register('chrome', None, webbrowser.BackgroundBrowser(chrome_path))
-webbrowser.get('chrome').open_new_tab(f"file://{os.path.abspath(output_path)}")
-
+print(f"Visualization has been saved to {output_path}. Open this file in a browser to view the interactive map.")
