@@ -1,7 +1,7 @@
 # Last update: Oct 24, 2024
 
 # Brief description
-# This sample code is a Python script for collecting information on global data centers from https://www.datacenters.com/locations
+# This is a Python script for collecting information on global data centers from https://www.datacenters.com/locations
 # Example of information collected: Data center name, Description, Geographical location (Address, Longitude, Latitude), Gross building size
 
 import time
