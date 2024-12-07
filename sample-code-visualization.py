@@ -1,4 +1,4 @@
-# Sample code for visualization
+# Last update: Nov 26, 2024
 
 # Brief description
 # This sample code is a Python script for generating an interactive choropleth map.
