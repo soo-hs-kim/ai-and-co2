@@ -2,7 +2,7 @@
 
 # Brief description
 # This sample code is a Python script for generating an interactive choropleth map.
-# This code visualizes U.S. state-level commercial emissions for each year.
+# This code visualizes U.S. state-level emissions (commercial sector) for each year.
 
 # Original data source: https://www.eia.gov/environment/emissions/state/
 # The excel file under "Commercial energy-related carbon dioxide emissions by state" was downloaded and saved as 'eia_emissions_commercial.xlsx' in the github repository
