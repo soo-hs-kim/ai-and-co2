@@ -1,7 +1,7 @@
 # Last update: Nov 26, 2024
 
 # Brief description
-# This sample code is a Python script for generating an interactive choropleth map.
+# This is a Python script for generating an interactive choropleth map.
 # This code visualizes U.S. state-level emissions (commercial sector) for each year.
 
 # Original data source: https://www.eia.gov/environment/emissions/state/
