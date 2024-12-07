@@ -13,3 +13,6 @@ Given the demand for AI and the need to reduce emissions both intensify, this pr
   + Python script for generating an interactive choropleth map.
   + Visualizing U.S. state-level emissions (commercial sector) for each year
   + data: eia_emissions_commercial.xlsx
+
++ ai_workforce.py
+  + Python script for preparing a dataset containing information on the AI workforce at the firm-year level.
